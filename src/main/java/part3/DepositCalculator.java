@@ -2,7 +2,10 @@ package part3;
 
 public class DepositCalculator {
     public static void printFutureValue(double principal, double rate, int years) {
-        // TODO: Implement solution here
+        for (int i = 1; i <= years; i++) {
+            principal += principal * rate;
+            System.out.println("Year " + i + ": " + principal);
+        }
     }
 
     public static void main(String[] args) {
