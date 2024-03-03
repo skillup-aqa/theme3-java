@@ -20,3 +20,7 @@ gradlew test
 ```
 
 If the tests are failing, review the HTML report with details. Also, test execution is part of the PR check
+
+## Keys 
+
+The solutions for tasks can be found in the `keys` branch. However, I encourage you to solve the tasks yourself first.
