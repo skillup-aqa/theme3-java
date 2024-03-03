@@ -1,4 +1,7 @@
+package part1;
+
 import org.testng.annotations.Test;
+import part1.CelsiusToFahrenheitConvertor;
 
 import static org.testng.Assert.assertEquals;
 

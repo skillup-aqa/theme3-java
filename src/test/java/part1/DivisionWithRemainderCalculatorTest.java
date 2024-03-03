@@ -1,4 +1,7 @@
+package part1;
+
 import org.testng.annotations.Test;
+import part1.DivisionWithRemainderCalculator;
 
 import static org.testng.Assert.assertEquals;
 

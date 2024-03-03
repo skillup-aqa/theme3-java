@@ -1,4 +1,7 @@
+package part1;
+
 import org.testng.annotations.Test;
+import part1.PercentCalculator;
 
 import static org.testng.Assert.assertEquals;
 
