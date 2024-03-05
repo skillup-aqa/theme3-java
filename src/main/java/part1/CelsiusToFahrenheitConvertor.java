@@ -2,7 +2,7 @@ package part1;
 
 public class CelsiusToFahrenheitConvertor {
     public static double convertCelsiusToFahrenheit(double celsius) {
-        double farenheit = celsius * (9.0 / 5.0) +32.0;
+        double farenheit = celsius * (9.0 / 5.0) + 32;
         return farenheit;
     }
 
