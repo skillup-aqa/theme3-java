@@ -19,7 +19,7 @@ public class ConvertCelsiusToFahrenheit {
         double F3 = b2;
         System.out.println(F3);
                 
-             
+        
         
         
         System.out.println(convertCelsiusToFahrenheit(0)); // Expected output: 32.0

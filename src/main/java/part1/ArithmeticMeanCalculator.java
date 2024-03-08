@@ -7,4 +7,3 @@ public class ArithmeticMeanCalculator {
         System.out.println(result);
     }
 }
-
