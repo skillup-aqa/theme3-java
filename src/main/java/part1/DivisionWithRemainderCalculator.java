@@ -9,4 +9,4 @@ public class DivisionWithRemainderCalculator {
         System.out.println(result);
     }
 }
- 
+  

@@ -18,7 +18,6 @@ public class ConvertCelsiusToFahrenheit {
         int b2 = a2 + 32;
         double F3 = b2;
         System.out.println(F3);
-                
         
         
         
