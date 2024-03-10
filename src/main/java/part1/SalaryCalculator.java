@@ -2,15 +2,15 @@ package part1;
 
 public class SalaryCalculator {
     public static double calculateSalaryBeforeTaxes(double hoursPerMonth, double hourlyRate) {
-        double SalaryBeforeTaxes = hoursPerMonth * hourlyRate;
-        return SalaryBeforeTaxes;
+        double salaryBeforeTaxes = hoursPerMonth * hourlyRate;
+        return salaryBeforeTaxes;
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
-        double SalaryBeforeTaxes = hoursPerMonth * hourlyRate;
-        double Taxes = (SalaryBeforeTaxes / 100 * 5) + 1562;
-        double SalaryAfterTaxes = Math.round(SalaryBeforeTaxes - Taxes);
-        return SalaryAfterTaxes;
+        double salaryBeforeTaxes = calculateSalaryBeforeTaxes(hoursPerMonth, hourlyRate);
+        double taxes = (salaryBeforeTaxes / 100 * 5) + 1562;
+        double salaryAfterTaxes = Math.round(salaryBeforeTaxes - taxes);
+        return salaryAfterTaxes;
     }
 
     public static void main(String[] args) {
