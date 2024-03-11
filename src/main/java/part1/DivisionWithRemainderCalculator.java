@@ -8,7 +8,7 @@ public class DivisionWithRemainderCalculator {
 
     public static void main(String[] args) {
         int dividend = 10;
-        int divisor = 3;
+        int divisor = 5;
         int result = calculateRemainder(dividend, divisor);
         System.out.println(result);
     }
