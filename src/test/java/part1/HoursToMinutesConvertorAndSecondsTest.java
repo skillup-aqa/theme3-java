@@ -1,10 +1,5 @@
 package part1;
 
-import org.testng.annotations.Test;
-import part1.HoursToMinutesConvertor;
-
-import static org.testng.Assert.assertEquals;
-
 public class HoursToMinutesConvertorAndSecondsTest {
     @Test
     public void testConvertHoursToMinutes() {

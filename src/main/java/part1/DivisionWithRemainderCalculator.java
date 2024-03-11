@@ -1,11 +1,11 @@
-new*
+package part1;
 public class DivisionWithRemainderCalculator {
 
 
     public static void main(String[] args) {
         int divided = 10;
         int divisor = 3;
-        double result = calculateRemainder(divided / divisor);
+        double result = divided % divisor;
         System.out.println(result);
     }
 }
