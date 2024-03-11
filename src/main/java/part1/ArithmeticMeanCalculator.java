@@ -1,3 +1,5 @@
+package part1;
+
 public class ArithmeticMeanCalculator {
     public static void main(String[] args) {
         int double a = 1;
