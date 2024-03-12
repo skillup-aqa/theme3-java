@@ -92,7 +92,7 @@ public class IntArrayOperations {
 
     }
 
-    public static int[] sort(int[] array) {
+    public static int[] sort(int[] array, boolean ascending) {
         int[] sorted = copy(array);
         for (int i = 0; i < sorted.length; i++) {
             for (int j = i + 1; j < sorted.length; j++) {
@@ -106,6 +106,11 @@ public class IntArrayOperations {
         return sorted;
     }
 
+    public static boolean isSorted(int[] array, boolean ascending) {
+        // TODO: Implement solution here
+        return false;
+    }
+
     public static int[] merge(int[] array1, int[] array2) {
         int[] merged = new int[array1.length + array2.length];
         for (int i = 0; i < array1.length; i++) {
@@ -117,7 +122,7 @@ public class IntArrayOperations {
         return merged;
     }
 
-    public static int binarySearch (int[] array, int value) {
+    public static int binarySearch (int[] array, int value, boolean ascending) {
         int left = 0;
         int right = array.length - 1;
         while (left <= right) {

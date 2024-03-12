@@ -2,8 +2,7 @@ package part4;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotEquals;
+import static org.testng.Assert.*;
 
 public class IntArrayOperationsTest {
     @Test
@@ -104,10 +103,58 @@ public class IntArrayOperationsTest {
     }
 
     @Test
-    public void testSort() {
+    public void testIsSortedAsc() {
+        int[] array1 = {1, 2, 3, 4, 5};
+        assertTrue(IntArrayOperations.isSorted(array1, true));
+    }
+
+    @Test
+    public void testIsSortedDesc() {
+        int[] array1 = {5, 4, 3, 2, 1};
+        assertTrue(IntArrayOperations.isSorted(array1, false));
+    }
+
+    @Test
+    public void testIsSortedForEmptyArray() {
+        int[] array1 = {};
+        assertTrue(IntArrayOperations.isSorted(array1, true));
+        assertTrue(IntArrayOperations.isSorted(array1, false));
+    }
+
+    @Test
+    public void testIsSortedForSingleElementArray() {
+        int[] array1 = {1};
+        assertTrue(IntArrayOperations.isSorted(array1, true));
+        assertTrue(IntArrayOperations.isSorted(array1, false));
+    }
+
+    @Test
+    public void testIsSortedForArrayOfEquals() {
+        int[] array1 = {1, 1, 1, 1, 1};
+        assertTrue(IntArrayOperations.isSorted(array1, true));
+        assertTrue(IntArrayOperations.isSorted(array1, false));
+    }
+
+    @Test
+    public void testIsSortedForUnsortedArray() {
+        int[] array1 = {1, 2, 1, 2, 1};
+        assertFalse(IntArrayOperations.isSorted(array1, true));
+        assertFalse(IntArrayOperations.isSorted(array1, false));
+    }
+
+    @Test
+    public void testSortAsc() {
         int[] array1 = {5, 4, 3, 2, 1};
         int[] expected = {1, 2, 3, 4, 5};
-        int[] result = IntArrayOperations.sort(array1);
+        int[] result = IntArrayOperations.sort(array1, true);
+        assertEquals(result, expected);
+    }
+
+    @Test
+    public void testSortDesc() {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] expected = {5, 4, 3, 2, 1};
+        int[] result = IntArrayOperations.sort(array1, false);
         assertEquals(result, expected);
     }
 
@@ -115,7 +162,15 @@ public class IntArrayOperationsTest {
     public void testSortForEmptyArray() {
         int[] array1 = {};
         int[] expected = {};
-        int[] result = IntArrayOperations.sort(array1);
+        int[] result = IntArrayOperations.sort(array1, true);
+        assertEquals(result, expected);
+    }
+
+    @Test
+    public void testSortForSingleElementArray() {
+        int[] array1 = {1};
+        int[] expected = {1};
+        int[] result = IntArrayOperations.sort(array1, true);
         assertEquals(result, expected);
     }
 
@@ -140,18 +195,30 @@ public class IntArrayOperationsTest {
     @Test
     public void testBinarySearch() {
         int[] array1 = {1, 2, 3, 4, 5};
-        assertEquals(IntArrayOperations.binarySearch(array1, 3), 2);
+        assertEquals(IntArrayOperations.binarySearch(array1, 3, true), 2);
+    }
+
+    @Test
+    public void testBinarySearchDesc() {
+        int[] array1 = {5, 4, 3, 2, 1};
+        assertEquals(IntArrayOperations.binarySearch(array1, 3, false), 2);
     }
 
     @Test
     public void testBinarySearchNotFound() {
         int[] array1 = {1, 2, 3, 4, 5};
-        assertEquals(IntArrayOperations.binarySearch(array1, 6), -1);
+        assertEquals(IntArrayOperations.binarySearch(array1, 6, true), -1);
     }
 
     @Test
     public void testBinarySearchForEmptyArray() {
         int[] array1 = {};
-        assertEquals(IntArrayOperations.binarySearch(array1, 6), -1);
+        assertEquals(IntArrayOperations.binarySearch(array1, 6, true), -1);
+    }
+
+    @Test
+    public void testBinarySearchForSingleElementArray() {
+        int[] array1 = {1};
+        assertEquals(IntArrayOperations.binarySearch(array1, 1, true), 0);
     }
 }
