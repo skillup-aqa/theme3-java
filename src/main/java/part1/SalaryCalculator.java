@@ -7,8 +7,8 @@ public class SalaryCalculator {
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
-       double calculateSalaryAfterTaxes =Math.round ((hoursPerMonth* hourlyRate*0.5)/100)-1562;
-        return calculateSalaryAfterTaxes;
+        double SalaryAfterTaxes = Math.ceil((hoursPerMonth * hourlyRate) - ((hoursPerMonth * hourlyRate) * 0.05)) - 1562.0;
+        return SalaryAfterTaxes;
     }
 
     public static void main(String[] args) {
