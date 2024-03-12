@@ -9,10 +9,4 @@ public class VowelChecker {
     public static void main(String[] args) {
         System.out.println(isVowel('a'));
     }
-
-    public static void main(String[] args) {
-        char character = 'a';
-        boolean result = isVowel(character);
-        System.out.println(result);
-    }
 }
