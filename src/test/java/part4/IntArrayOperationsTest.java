@@ -13,8 +13,14 @@ public class IntArrayOperationsTest {
     }
 
     @Test
-    public void testMax() {
+    public void testMaxLast() {
         int[] array1 = {1, 2, 3, 4, 5};
+        assertEquals(IntArrayOperations.max(array1), 5);
+    }
+
+    @Test
+    public void testMaxFirst() {
+        int[] array1 = {5, 4, 3, 2, 1};
         assertEquals(IntArrayOperations.max(array1), 5);
     }
 
@@ -26,7 +32,7 @@ public class IntArrayOperationsTest {
 
     @Test
     public void testMin() {
-        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array1 = {3, 2, 1, 1, 2};
         assertEquals(IntArrayOperations.min(array1), 1);
     }
 
@@ -144,7 +150,7 @@ public class IntArrayOperationsTest {
 
     @Test
     public void testSortAsc() {
-        int[] array1 = {5, 4, 3, 2, 1};
+        int[] array1 = {1, 3, 5, 4, 2};
         int[] expected = {1, 2, 3, 4, 5};
         int[] result = IntArrayOperations.sort(array1, true);
         assertEquals(result, expected);
@@ -152,7 +158,7 @@ public class IntArrayOperationsTest {
 
     @Test
     public void testSortDesc() {
-        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array1 = {1, 3, 5, 4, 2};
         int[] expected = {5, 4, 3, 2, 1};
         int[] result = IntArrayOperations.sort(array1, false);
         assertEquals(result, expected);
@@ -193,15 +199,45 @@ public class IntArrayOperationsTest {
     }
 
     @Test
-    public void testBinarySearch() {
+    public void testBinarySearchMiddleVal() {
         int[] array1 = {1, 2, 3, 4, 5};
         assertEquals(IntArrayOperations.binarySearch(array1, 3, true), 2);
     }
 
     @Test
-    public void testBinarySearchDesc() {
+    public void testBinarySearchAscLeftVal() {
+        int[] array1 = {1, 2, 3, 4, 5};
+        assertEquals(IntArrayOperations.binarySearch(array1, 1, true), 0);
+    }
+
+    @Test
+    public void testBinarySearchAscRightVal() {
+        int[] array1 = {1, 2, 3, 4, 5};
+        assertEquals(IntArrayOperations.binarySearch(array1, 5, true), 4);
+    }
+
+    @Test
+    public void testBinarySearchDescMiddleVal() {
         int[] array1 = {5, 4, 3, 2, 1};
         assertEquals(IntArrayOperations.binarySearch(array1, 3, false), 2);
+    }
+
+    @Test
+    public void testBinarySearchDescLeftVal() {
+        int[] array1 = {5, 4, 3, 2, 1};
+        assertEquals(IntArrayOperations.binarySearch(array1, 5, false), 0);
+    }
+
+    @Test
+    public void testBinarySearchDescRightVal() {
+        int[] array1 = {5, 4, 3, 2, 1};
+        assertEquals(IntArrayOperations.binarySearch(array1, 1, false), 4);
+    }
+
+    @Test
+    public void testBinarySearchForUnsortedArray() {
+        int[] array1 = {1, 3, 5, 4, 2};
+        assertEquals(IntArrayOperations.binarySearch(array1, 3, false), -1);
     }
 
     @Test
