@@ -152,7 +152,8 @@ public class IntArrayOperations {
         int right = array.length - 1;
 
         if (!isSorted(array, ascending)) {
-            array = sort(array, ascending);
+            System.out.println("Array is not sorted");
+            return -1;
         }
 
         while (left <= right) {
