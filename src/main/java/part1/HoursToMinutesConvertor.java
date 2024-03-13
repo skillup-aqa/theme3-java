@@ -2,17 +2,17 @@ package part1;
 
 public class HoursToMinutesConvertor {
     public static int convertHoursToMinutes(int hours) {
-        // TODO: Implement solution here
-        return -1;
+        int convertHoursToMinutes = hours * 60;
+        return convertHoursToMinutes;
     }
 
     public static int convertHoursToSeconds(int hours) {
-        // TODO: Implement solution here
-        return -1;
+        int convertHoursToSeconds = hours * 60 * 60;
+        return convertHoursToSeconds;
     }
 
     public static void main(String[] args) {
-        int hours = 1;
+        int hours = 5;
         int result = convertHoursToMinutes(hours);
         System.out.println(result);
         result = convertHoursToSeconds(hours);
