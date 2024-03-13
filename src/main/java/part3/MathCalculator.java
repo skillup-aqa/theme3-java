@@ -2,20 +2,36 @@ package part3;
 
 public class MathCalculator {
     public static int sumPositiveNumbersToN(int n) {
-        // Consider 0 as a positive number
-        // TODO: Implement solution here
-        return -1;
+        int sum = 0;
+        for (int i = 0; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
     }
 
     public static int factorial(int n) {
-        // TODO: Implement solution here
-        return -1;
+        int valueOfFactorial = 1;
+
+        if (n == 0) {
+            return valueOfFactorial;
+        } else {
+            int i = 1;
+            while (i <= n) {
+                valueOfFactorial *= i;
+                i++;
+            }
+        }
+
+        return valueOfFactorial;
     }
 
     public static boolean isPrime(int n) {
-        // Consider 1 and negative numbers as non-prime
-        // TODO: Implement solution here
-        return false;
+        boolean result;
+        if (n > 1 && n % n == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static boolean isArmstrongNumber(int n) {
