@@ -3,32 +3,31 @@ package part2;
 public class AgeOnPlanetCalculator {
     public static double calculateAgeOnPlanet(int ageInYears, String planet) {
         // If the planet is not in the list, return -1
-        double doubleAgeInYears = ageInYears;
         double age;
         switch (planet) {
             case "Mercury":
-                age = doubleAgeInYears / 0.2408467;
+                age = ageInYears / 0.2408467;
                 break;
             case "Venus":
-                age = doubleAgeInYears / 0.61519726;
+                age = ageInYears / 0.61519726;
                 break;
           /*  case "Earth":
-                age = doubleAgeInYears;
+                age = ageInYears;
                 break; */
             case "Mars":
-                age = doubleAgeInYears / 1.8808158;
+                age = ageInYears / 1.8808158;
                 break;
             case "Jupiter":
-                age = doubleAgeInYears / 11.862615;
+                age = ageInYears / 11.862615;
                 break;
             case "Saturn":
-                age = doubleAgeInYears / 29.447498;
+                age = ageInYears / 29.447498;
                 break;
             case "Uranus":
-                age = doubleAgeInYears / 84.016846;
+                age = ageInYears / 84.016846;
                 break;
             case "Neptune":
-                age = doubleAgeInYears / 164.79132;
+                age = ageInYears / 164.79132;
                 break;
             default:
                 age = -1;
