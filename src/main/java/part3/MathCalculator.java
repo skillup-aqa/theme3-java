@@ -26,12 +26,14 @@ public class MathCalculator {
     }
 
     public static boolean isPrime(int n) {
-        boolean result;
-        if (n > 1 && n % n == 0) {
-            return true;
-        } else {
-            return false;
+        if (n > 1) {
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
         }
+        return true;
     }
 
     public static boolean isArmstrongNumber(int n) {
@@ -53,7 +55,7 @@ public class MathCalculator {
         printFibonacciNumbers(10);
         printDigitsReversed(12345);
 
-        int n = 5;
+        int n = 11;
         System.out.println("Sum of positive numbers up to " + n + " is " + sumPositiveNumbersToN(n));
         System.out.println(n + " factorial is " + factorial(n));
         System.out.println(n + " is prime: " + isPrime(n));
