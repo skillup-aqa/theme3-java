@@ -2,13 +2,11 @@ package part1;
 
 public class HoursToMinutesConvertor {
     public static int convertHoursToMinutes(int hours) {
-        int convertHoursToMinutes = hours * 60;
-        return convertHoursToMinutes;
+        return hours * 60;
     }
 
     public static int convertHoursToSeconds(int hours) {
-        int convertHoursToSeconds = hours * 60 * 60;
-        return convertHoursToSeconds;
+        return hours * 60 * 60;
     }
 
     public static void main(String[] args) {
