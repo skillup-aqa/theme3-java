@@ -2,8 +2,9 @@ package part1;
 
 public class CelsiusToFahrenheitConvertor {
     public static double convertCelsiusToFahrenheit(double celsius) {
-        // TODO: Implement solution here
-        return -1;
+        double CelsiusToFahrenheit = (celsius * 9/5) + 32;
+
+        return CelsiusToFahrenheit;
     }
 
     public static void main(String[] args) {
