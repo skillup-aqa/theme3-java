@@ -20,14 +20,12 @@ public class TemperatureConvertor {
         if (scale == 'f' || scale == 'F') {
             System.out.println("Enter temperature in Fahrenheit: ");
             double temperatureInFahrenheit = scanner.nextDouble();
-            System.out.println("Degree in Celsius equal is "+ convertFahrenheitToCelsius(temperatureInFahrenheit));
-        }
-        else if  (scale == 'c' || scale == 'C') {
+            System.out.println("Degree in Celsius equal is " + convertFahrenheitToCelsius(temperatureInFahrenheit));
+        } else if (scale == 'c' || scale == 'C') {
             System.out.println("Enter temperature in Celsius: ");
             double temperatureInCelsius = scanner.nextDouble();
-            System.out.println("Degree in Fahrenheit equal is "+ convertCelsiusToFahrenheit(temperatureInCelsius));
-        }
-        else {
+            System.out.println("Degree in Fahrenheit equal is " + convertCelsiusToFahrenheit(temperatureInCelsius));
+        } else {
             System.out.println("Quit was executed");
         }
 
