@@ -2,7 +2,7 @@ package part1;
 
 public class PercentCalculator {
     public static double calculatePercent(double number, double percent) {
-      double calculatePercent = (number * percent)/100;
+        double calculatePercent = (number * percent) / 100;
         return calculatePercent;
     }
 
