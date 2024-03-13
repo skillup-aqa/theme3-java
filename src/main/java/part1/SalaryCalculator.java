@@ -2,6 +2,7 @@ package part1;
 
 public class SalaryCalculator {
     public static double calculateSalaryBeforeTaxes(double hoursPerMonth, double hourlyRate) {
+
         return hoursPerMonth * hourlyRate;
 
     }

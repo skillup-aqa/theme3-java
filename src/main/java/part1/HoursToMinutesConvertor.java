@@ -2,6 +2,7 @@ package part1;
 
 public class HoursToMinutesConvertor {
     public static int convertHoursToMinutes(int hours) {
+
         return hours * 60;
     }
 
