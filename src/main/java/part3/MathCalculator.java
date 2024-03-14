@@ -39,8 +39,17 @@ public class MathCalculator {
     }
 
     public static boolean isArmstrongNumber(int n) {
-        // TODO: Implement solution here
-        return false;
+        int degree = String.valueOf(n).length();
+        int k = 0;
+        int num = n;
+        int digit;
+
+        while (num > 0) {
+            digit = num % 10;
+            k = (int) (k + Math.pow(digit, degree));
+            num = num / 10;
+        }
+        return k == n;
     }
 
     public static void printFibonacciNumbers(int n) {
