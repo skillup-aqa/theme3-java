@@ -1,9 +1,14 @@
 package part1;
-
+import java.util.Scanner;
 public class PercentCalculator {
     public static double calculatePercent(double number, double percent) {
-        // TODO: Implement solution here
-        return -1;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter namber");
+        double a = scan.nextDouble();
+               System.out.println("Enter %");
+        double b = scan.nextDouble();
+        double x = (a*b)/100;
+        return x;
     }
 
     public static void main(String[] args) {
