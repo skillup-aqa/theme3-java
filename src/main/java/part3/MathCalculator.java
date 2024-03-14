@@ -59,13 +59,22 @@ public class MathCalculator {
             a = b;
             b = c;
         }
+        System.out.println();
 
     }
 
     public static void printDigitsReversed(int n) {
         // Use System.out.print() to print the digits without new line
-        // TODO: Implement solution here
+        int num = n;
+        int digit;
 
+        while (num > 0) {
+            digit = num % 10;
+            System.out.print(digit);
+            num = num / 10;
+        }
+        System.out.println();
+        System.out.println();
     }
 
     public static void main(String[] args) {
