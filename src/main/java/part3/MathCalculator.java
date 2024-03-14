@@ -44,11 +44,19 @@ public class MathCalculator {
     }
 
     public static void printFibonacciNumbers(int n) {
+        int a = 0;
+        int b = 1;
 
-        for (int i = -1, j = 0; j < n; i++, j++) {
-            if (i == -1) System.out.println(1);
-            else System.out.println(i + j);
+        System.out.println(a);
+        System.out.println(b);
+        for (int i = 2; i < n; i++) {
+            int c;
+            c = a + b;
+            System.out.println(c);
+            a = b;
+            b = c;
         }
+
     }
 
     public static void printDigitsReversed(int n) {
