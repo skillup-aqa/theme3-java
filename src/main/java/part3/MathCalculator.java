@@ -46,7 +46,10 @@ public class MathCalculator {
     public static void printFibonacciNumbers(int n) {
         int a = 0;
         int b = 1;
-
+        if (n == 1) {
+            System.out.println(a);
+            return;
+        }
         System.out.println(a);
         System.out.println(b);
         for (int i = 2; i < n; i++) {
