@@ -1,15 +1,33 @@
 package part3;
 
+import java.util.Scanner;
+
 public class CollatzConjectureTester {
-    public static int collatzConjecture(int n) {
-        // Read about Collatz Conjecture here: https://en.wikipedia.org/wiki/Collatz_conjecture
-        // TODO: Implement solution here
-        return -1;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a natural number:");
+        int number = input.nextInt();
+        if (number <= 0) {
+            System.out.println("The number must be natural.");
+            return;
+        }
+        int steps = collatzConjecture(number);
+        System.out.println("Number of steps required to get 1:" + steps);
     }
 
-    public static void main(String[] args) {
-        int n = 6;
-        int result = collatzConjecture(n);
-        System.out.println(result);
+    public static int collatzConjecture(int n) {
+
+        int steps = 0;
+        while (n != 1) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+            steps++;
+        }
+
+        return steps;
     }
+
 }
