@@ -3,7 +3,7 @@ package part3;
 public class CollatzConjectureTester {
     public static int collatzConjecture(int n) {
 
-        int i = 1;
+        int i = 0;
         while (n > 1) {
             if ((n % 2) == 0) {
                 n = n / 2;
