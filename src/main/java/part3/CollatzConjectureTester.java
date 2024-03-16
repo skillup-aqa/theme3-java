@@ -3,6 +3,7 @@ package part3;
 import java.util.Scanner;
 
 public class CollatzConjectureTester {
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a natural number:");
@@ -26,7 +27,6 @@ public class CollatzConjectureTester {
             }
             steps++;
         }
-
         return steps;
     }
 
