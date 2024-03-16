@@ -19,7 +19,6 @@ public class PointsToMarksConvertor {
             result = 'O';  //Default in case of invalid points
         }
 
-
         return result;
     }
 
