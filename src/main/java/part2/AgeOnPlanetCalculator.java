@@ -3,7 +3,7 @@ package part2;
 public class AgeOnPlanetCalculator {
     public static double calculateAgeOnPlanet(int ageInYears, String planet) {
         // If the planet is not in the list, return -1
-        return switch (planet) {
+        switch (planet) {
             case "Merkurii":
                 System.out.println("Year in Merkurii:" + ageInYears / 0.2408467);
                 break;
@@ -27,16 +27,17 @@ public class AgeOnPlanetCalculator {
                 break;
             default:
                 System.out.println("Planet not found:" + planet);
-
-        };
+        }
+        ;
+        return -1;
     }
-}
 
 
-public static void main(String[] args) {
-    int ageInYears = 1;
-    String planet = "Mars";
-    double result = calculateAgeOnPlanet(ageInYears, planet);
-    System.out.println(result);
+    public static void main(String[] args) {
+        int ageInYears = 1;
+        String planet = "Mars";
+        double result = calculateAgeOnPlanet(ageInYears, planet);
+        System.out.println(result);
+    }
 }
 
