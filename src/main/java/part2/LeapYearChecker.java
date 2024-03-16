@@ -6,14 +6,14 @@ public class LeapYearChecker {
 
         if (year % 400 == 0) {
             result = true;
-        } else if (year % 4 == 0 && year / 100 != 0) {
+        } else if (year % 4 == 0 && year % 100 != 0) {
             result = true;
         }
-        return false;
+        return result;
     }
 
     public static void main(String[] args) {
-        int year = 2020;
+        int year = 2000;
         boolean result = isLeapYear(year);
         System.out.println(result);
     }
