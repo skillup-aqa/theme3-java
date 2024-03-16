@@ -6,7 +6,10 @@ public class LeapYearChecker {
         if (year % 4 == 0) {
             return true;
 
-        } else {
+        } else if (year % 100 == 0){
+            return true;
+
+        } else{
             return false;
         }
 
