@@ -1,16 +1,9 @@
 package part1;
-import java.util.Scanner;
+
 public class CelsiusToFahrenheitConvertor {
     public static double convertCelsiusToFahrenheit(double celsius) {
-Scanner scan = new Scanner(System.in);
-        System.out.println("Enter C");
-        double x = scan.nextDouble();
-        int a = 9;
-        int b = 5;
-        int c = 32;
 
-        double F = (x * a / b) + c;
-        System.out.println(F);
+        double F = (celsius * 9 / 5) + 32;
         return F;
     }
 
