@@ -20,4 +20,5 @@ public class DartsGame {
         int result = getScore(x, y);
         System.out.println(result);
     }
+
 }
