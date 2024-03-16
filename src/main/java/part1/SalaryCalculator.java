@@ -2,22 +2,20 @@ package part1;
 
 public class SalaryCalculator {
     public static double calculateSalaryBeforeTaxes(double hoursPerMonth, double hourlyRate) {
-        double salaryBeforeTax1 = (hoursPerMonth * hourlyRate);
-        double salaryBeforeTax = Math.ceil(salaryBeforeTax1 * 100) / 100;
-        return salaryBeforeTax;
+        double salaryBeforeTaxes1 = (hoursPerMonth * hourlyRate);
+        return Math.floor(salaryBeforeTaxes1 * 100) / 100;
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
-        double salaryBeforeTax = Math.ceil(hoursPerMonth * hourlyRate * 100) / 100;
-        double tax = (salaryBeforeTax * 0.05) + 1562.00;
-        double salaryAfterTax1 = (hoursPerMonth * hourlyRate) - tax;
-        double salaryAfterTax = Math.floor(salaryAfterTax1 * 100) / 100;
-        return salaryAfterTax;
+        double salaryBeforeTaxes = Math.ceil(hoursPerMonth * hourlyRate * 100) / 100;
+        double tax = (salaryBeforeTaxes * 0.05) + 1562.00;
+        double salaryAfterTaxes1 = (hoursPerMonth * hourlyRate) - tax;
+        return Math.floor(salaryAfterTaxes1 * 100) / 100;
     }
 
     public static void main(String[] args) {
-        System.out.println(calculateSalaryBeforeTaxes(160, 10));
-        System.out.println(calculateSalaryAfterTaxes(160, 10));
+        System.out.println(calculateSalaryBeforeTaxes(40, 290.24));
+        System.out.println(calculateSalaryAfterTaxes(40, 290.24));
     }
 
 }
