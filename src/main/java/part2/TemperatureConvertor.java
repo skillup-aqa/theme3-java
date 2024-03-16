@@ -1,22 +1,26 @@
 package part2;
-
 import java.util.Scanner;
-
 public class TemperatureConvertor {
     public static double convertCelsiusToFahrenheit(double celsius) {
-        // TODO: Implement solution here
-        return -1;
+        return (celsius * 1.8) + 32;
     }
-
     public static double convertFahrenheitToCelsius(double fahrenheit) {
-        // TODO: Implement solution here
-        return -1;
+        return (fahrenheit - 32) / 1.8;
     }
-
     public static void requestInputAndCalculate() {
-        // TODO: Put here the request for temperature and scale
-    }
+    Scanner in = new Scanner(System.in);
+        System.out.println("Enter temperature");
+        double temperature = in.nextDouble();
 
+        System.out.println ("Enter type of temperature C oR F");
+        String type = in.next();
+
+        if (type == "C") {
+            System.out.println("Temperature in Fahrenheit" + convertCelsiusToFahrenheit(temperature));
+        } else {
+            System.out.println("Temperature in Celsius" + convertFahrenheitToCelsius(temperature));
+        }
+    }
     public static void main(String[] args) {
         requestInputAndCalculate();
     }
