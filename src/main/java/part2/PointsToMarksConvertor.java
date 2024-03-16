@@ -5,7 +5,7 @@ public class PointsToMarksConvertor {
         // Assume that points are always non-negative integers and less than 100
         char result;
 
-        if (points >= 90 && points < 100) {
+        if (points >= 90 && points <= 100) {
             result = 'A';
         } else if (points >= 85 && points <= 89) {
             result = 'B';
@@ -24,7 +24,7 @@ public class PointsToMarksConvertor {
     }
 
     public static void main(String[] args) {
-        int points = 90;
+        int points = 85;
         char result = convertPointsToMarks(points);
         System.out.println(result);
     }
