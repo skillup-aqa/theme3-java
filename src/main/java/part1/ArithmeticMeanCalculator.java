@@ -4,7 +4,7 @@ public class ArithmeticMeanCalculator {
     public static double calculateArithmeticMean(double a, double b, double c) {
                 double result = (a+b+c)/3;
         return result;
-        //System.out.println(sum);
+
     }
 
     public static void main(String[] args) {
