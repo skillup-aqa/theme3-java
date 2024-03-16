@@ -11,7 +11,7 @@ public class AgeOnPlanetCalculator {
             case "Saturn" : yield  ageInYears / 29.447498;
             case "Uranus" : yield  ageInYears / 84.016846;
             case "Neptune" : yield   ageInYears / 164.79132;
-            default :  {
+            default : {
                 System.out.println("Що це за планета: " + planet + '?');
                 yield -1;
             }

@@ -7,8 +7,8 @@ public class DartsGame {
         else if (hypotenuse > 5) {return 1;}  //     return 10;
         else if (hypotenuse > 1) { return 5;} // } else if (hypotenuse <= 5) {
         else { return 10;} //     return 5;
-                                             // } else if (hypotenuse <= 10) {
-                                             //     return 1;
+                                              // } else if (hypotenuse <= 10) {
+                                              //     return 1;
                                               // } else {
                                                //     return 0;
                                                 // }
