@@ -71,16 +71,16 @@ public class IntArrayOperations {
     }
 
     public static int[] removeDuplicates(int[] array) {
-        int[] withNoDuplicates = new int [array.length];
+        int[] withNoDuplicates = new int[array.length];
         int i = 0;
-        for (int j: array){
+        for (int j : array) {
             if (indexOf(withNoDuplicates, j) == -1) {
                 withNoDuplicates[i] = j;
                 i++;
             }
 
         }
-        int[] result = new int [i];
+        int[] result = new int[i];
         for (int q = 0; q < i; q++) {
             result[q] = withNoDuplicates[q];
         }
@@ -135,7 +135,6 @@ public class IntArrayOperations {
         for (int i : removeDuplicates(arrayToCheckIfValueIsPresent)) {
             System.out.println(i);
         }
-
 
 
     }
