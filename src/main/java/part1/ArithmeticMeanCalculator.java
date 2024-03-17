@@ -2,7 +2,7 @@ package part1;
 
 public class ArithmeticMeanCalculator {
     public static double calculateArithmeticMean(double a, double b, double c) {
-                double result = (a+b+c)/3;
+        double result = (a + b + c) / 3;
         return result;
 
     }

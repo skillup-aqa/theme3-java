@@ -5,7 +5,7 @@ public class SalaryCalculator {
         double hours = 8;
         double days = 20;
         double pay = 10;
-        double salary = hours*days*pay;
+        double salary = hours * days * pay;
         return salary;
     }
 
@@ -13,10 +13,10 @@ public class SalaryCalculator {
         double hours = 8;
         double days = 20;
         double pay = 10;
-        double salary = hours*days*pay;
-        double tax = salary*5/100;
+        double salary = hours * days * pay;
+        double tax = salary * 5 / 100;
         double tax2 = 1562;
-        double salaryafter = salary-tax-tax2;
+        double salaryafter = salary - tax - tax2;
         return salaryafter;
     }
 
