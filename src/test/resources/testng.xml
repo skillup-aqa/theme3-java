@@ -4,6 +4,8 @@
     <test name="part1">
         <packages>
             <package name="part1" />
+            <package name="part2" />
+            <package name="part3" />
         </packages>
     </test>
 </suite>

@@ -46,9 +46,14 @@ public class IntArrayOperations {
         return null;
     }
 
-    public static int[] sort(int[] array) {
+    public static int[] sort(int[] array, boolean ascending) {
         // TODO: Implement solution here
         return null;
+    }
+
+    public static boolean isSorted(int[] array, boolean ascending) {
+        // TODO: Implement solution here
+        return false;
     }
 
     public static int[] merge(int[] array1, int[] array2) {
@@ -56,7 +61,7 @@ public class IntArrayOperations {
         return null;
     }
 
-    public static int binarySearch (int[] array, int value) {
+    public static int binarySearch (int[] array, int value, boolean ascending) {
         // TODO: Implement solution here
         return -1;
     }
