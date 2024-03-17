@@ -33,7 +33,7 @@ public class MathCalculator {
         while (n > 0) {
             int digit = n % 10;
             n /= 10;
-            sum += Math.pow(digit, digits);
+            sum += (int) Math.pow(digit, digits);
         }
         return sum == original;
     }
