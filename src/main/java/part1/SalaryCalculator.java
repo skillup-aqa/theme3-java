@@ -3,14 +3,14 @@ package part1;
 public class SalaryCalculator {
     public static double calculateSalaryBeforeTaxes(double hoursPerMonth, double hourlyRate) {
         double salary = hoursPerMonth * hourlyRate;
-        return salary;
+        return Math.floor(salary);
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
         double grossSalary = hoursPerMonth * hourlyRate;
-        double percentageAmount = ((grossSalary * 5) / 100) + 1562;
+        double percentageAmount = grossSalary * 0.95 - 1562;
         double SalaryAfterTaxes = grossSalary - percentageAmount;
-        return SalaryAfterTaxes;
+        return Math.floor(SalaryAfterTaxes);
     }
 
     public static void main(String[] args) {
