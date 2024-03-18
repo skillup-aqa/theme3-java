@@ -8,3 +8,4 @@ public class PercentCalculator {
         System.out.println(percentage + "%");
     }
 }
+
