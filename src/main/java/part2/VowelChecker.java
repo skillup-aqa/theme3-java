@@ -3,10 +3,11 @@ package part2;
 public class VowelChecker {
     public static boolean isVowel(char character) {
         // Consider, that character is a latin lowercase letter.
-        return "aeiou".indexOf(character) != -1;
+        return character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u';
     }
+
     public static void main(String[] args) {
-        char character = 'o';
+        char character = 'u';
         boolean result = isVowel(character);
         System.out.println(result);
     }
