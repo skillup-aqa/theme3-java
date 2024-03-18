@@ -40,26 +40,25 @@ public class MathCalculator {
 
     public static boolean isArmstrongNumber(int n) {
         int degree = String.valueOf(n).length();
-        int k = 0;
+        int  iteratedNumber= 0;
         int num = n;
         int digit;
 
         while (num > 0) {
             digit = num % 10;
-            k = (int) (k + Math.pow(digit, degree));
+            iteratedNumber = (int) (iteratedNumber + Math.pow(digit, degree));
             num = num / 10;
         }
-        return k == n;
+        return iteratedNumber == n;
     }
 
     public static void printFibonacciNumbers(int n) {
         int a = 0;
         int b = 1;
+        System.out.println(a);
         if (n == 1) {
-            System.out.println(a);
             return;
         }
-        System.out.println(a);
         System.out.println(b);
         for (int i = 2; i < n; i++) {
             int c;

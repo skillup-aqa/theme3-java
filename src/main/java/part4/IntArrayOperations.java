@@ -109,11 +109,13 @@ public class IntArrayOperations {
     }
 
     public static void main(String[] args) {
+        int[] emptyArray = {};
         int[] array1 = new int[5];
         int[] array2 = fillWithNumbers(array1);
         System.out.println("Max value is: " + max(array2));
         System.out.println("Min value is: " + min(array2));
         System.out.println("Avg value is: " + avg(array2));
+       // System.out.println("Avg for empty: " + avg(emptyArray));
 
         System.out.println("Reversed array is: ");
         int[] revArray = reverse(array2);
