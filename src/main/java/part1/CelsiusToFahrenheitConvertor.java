@@ -12,3 +12,4 @@ public class CelsiusToFahrenheitConvertor {
         System.out.println(celsiusToFahrenheitConvertor(37)); // Expected output: 98.6
     }
 }
+
