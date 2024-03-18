@@ -11,17 +11,9 @@ public class MathCalculator {
 
     public static int factorial(int n) {
         int valueOfFactorial = 1;
-
-        if (n == 0) {
-            return valueOfFactorial;
-        } else {
-            int i = 1;
-            while (i <= n) {
-                valueOfFactorial *= i;
-                i++;
-            }
+        for (int i = 1; i <= n; i++) {
+            valueOfFactorial *= i;
         }
-
         return valueOfFactorial;
     }
 
@@ -39,17 +31,22 @@ public class MathCalculator {
     }
 
     public static boolean isArmstrongNumber(int n) {
-        int degree = String.valueOf(n).length();
-        int  iteratedNumber= 0;
+        int degree = 0;
+        int iteratedNumberSum = 0;
         int num = n;
         int digit;
+        while (num > 0) {
+            degree++;
+            num /= 10;
+        }
+        num = n;
 
         while (num > 0) {
             digit = num % 10;
-            iteratedNumber = (int) (iteratedNumber + Math.pow(digit, degree));
+            iteratedNumberSum = (int) (iteratedNumberSum + Math.pow(digit, degree));
             num = num / 10;
         }
-        return iteratedNumber == n;
+        return iteratedNumberSum == n;
     }
 
     public static void printFibonacciNumbers(int n) {

@@ -3,14 +3,10 @@ package part2;
 public class LeapYearChecker {
     public static boolean isLeapYear(int year) {
         // Read about leap years here: https://en.wikipedia.org/wiki/Leap_year
-        // TODO: Implement solution here
-        boolean isLeapYear;
         if (year % 100 == 0 && year % 400 != 0) {
-            isLeapYear = false;
-        } else {
-            isLeapYear = year % 4 == 0;
+            return false;
         }
-        return isLeapYear;
+        return year % 4 == 0;
     }
 
     public static void main(String[] args) {
