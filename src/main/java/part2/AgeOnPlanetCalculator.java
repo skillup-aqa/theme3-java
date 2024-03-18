@@ -20,7 +20,7 @@ public class AgeOnPlanetCalculator {
                 return ageInYears / 164.79132;
             default:
                 System.out.println("Unknown planet: " + planet);
-                 return - 1;
+                return -1;
         }
     }
 
