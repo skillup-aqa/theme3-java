@@ -1,7 +1,7 @@
 package part1;
 
 public class ArithmeticMeanCalculator {
-    public static double calculateArithmeticMean(int a, double b, double c) {
+    public static double calculateArithmeticMean(double a, double b, double c) {
         // Calculate the mean
         return (a + b + c) / 3;
     }
