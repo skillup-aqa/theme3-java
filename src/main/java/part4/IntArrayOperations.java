@@ -93,6 +93,7 @@ public class IntArrayOperations {
         array[i] = array[j];
         array[j] = temp;
     }
+
     public static int[] sort(int[] array, boolean ascending) {
         int[] sorted = copy(array);
         for (int i = 0; i < sorted.length; i++) {
@@ -112,8 +113,23 @@ public class IntArrayOperations {
     }
 
     public static boolean isSorted(int[] array, boolean ascending) {
-        // TODO: Implement solution here
-        return false;
+        if (array.length < 2) {
+            return true;
+        }
+
+        for (int i = 0; i < array.length - 1; i++) {
+            if (ascending) {
+                if (array[i] > array[i + 1]) {
+                    return false;
+                }
+            } else {
+                if (array[i] < array[i + 1]) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     public static int[] merge(int[] array1, int[] array2) {
@@ -175,13 +191,15 @@ public class IntArrayOperations {
         for (int j : sort(arrayToCheckIfValueIsPresent, true)) {
             System.out.println(j);
         }
+        System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, true), false));
+        System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, true), true));
 
         System.out.println("Sorted array descending : ");
         for (int j : sort(arrayToCheckIfValueIsPresent, false)) {
             System.out.println(j);
         }
-
-
+        System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), false));
+        System.out.println("Is sorted ascending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), true));
 
 
     }
