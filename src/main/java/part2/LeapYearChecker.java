@@ -3,12 +3,11 @@ package part2;
 public class LeapYearChecker {
     public static boolean isLeapYear(int year) {
         // Read about leap years here: https://en.wikipedia.org/wiki/Leap_year
-        // TODO: Implement solution here
-        return false;
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
     public static void main(String[] args) {
-        int year = 2020;
+        int year = 2024;
         boolean result = isLeapYear(year);
         System.out.println(result);
     }
