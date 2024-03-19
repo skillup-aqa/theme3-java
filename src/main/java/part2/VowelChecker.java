@@ -1,10 +1,11 @@
 package part2;
 
+
 public class VowelChecker {
     public static boolean isVowel(char character) {
         // Consider, that character is a latin lowercase letter.
-        // TODO: Implement solution here
-        return false;
+        //Second commit.
+        return character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' || character == 'y';
     }
 
     public static void main(String[] args) {
