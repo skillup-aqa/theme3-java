@@ -1,6 +1,6 @@
 package part1;
 public class PercentCalculator {
- 
+
     public static void main(String[] args) {
         double total = 100;
         double value = 10;
@@ -8,4 +8,3 @@ public class PercentCalculator {
         System.out.println(percentage + "%");
     }
 }
-
