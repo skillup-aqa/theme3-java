@@ -99,8 +99,18 @@ public class IntArrayOperations {
     }
 
     public static int[] merge(int[] array1, int[] array2) {
-        // TODO: Implement solution here
-        return null;
+        int lengthOfMergedArray = array1.length + array2.length;
+        int[] mergedArray = new int[lengthOfMergedArray];
+        int n = 0;
+        for (int i = 0; i < array1.length; i++) {
+            mergedArray[i] = array1[i];
+        }
+
+        for (int k = array1.length; k < lengthOfMergedArray; k++) {
+            mergedArray[k] = array2[n];
+            n++;
+        }
+        return mergedArray;
     }
 
     public static int binarySearch(int[] array, int value, boolean ascending) {
@@ -115,7 +125,7 @@ public class IntArrayOperations {
         System.out.println("Max value is: " + max(array2));
         System.out.println("Min value is: " + min(array2));
         System.out.println("Avg value is: " + avg(array2));
-       // System.out.println("Avg for empty: " + avg(emptyArray));
+        // System.out.println("Avg for empty: " + avg(emptyArray));
 
         System.out.println("Reversed array is: ");
         int[] revArray = reverse(array2);
@@ -136,6 +146,11 @@ public class IntArrayOperations {
         System.out.println("Removed duplicates: ");
         for (int i : removeDuplicates(arrayToCheckIfValueIsPresent)) {
             System.out.println(i);
+        }
+
+        System.out.println("Merged array : ");
+        for (int j : merge(array2, arrayToCheckIfValueIsPresent)) {
+            System.out.println(j);
         }
 
 
