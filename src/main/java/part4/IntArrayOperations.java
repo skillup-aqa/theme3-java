@@ -88,9 +88,27 @@ public class IntArrayOperations {
         return result;
     }
 
+    private static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
     public static int[] sort(int[] array, boolean ascending) {
-        // TODO: Implement solution here
-        return null;
+        int[] sorted = copy(array);
+        for (int i = 0; i < sorted.length; i++) {
+            for (int j = i + 1; j < sorted.length; j++) {
+                if (ascending) {
+                    if (sorted[i] > sorted[j]) {
+                        swap(sorted, i, j);
+                    }
+                } else {
+                    if (sorted[i] < sorted[j]) {
+                        swap(sorted, i, j);
+                    }
+                }
+            }
+        }
+        return sorted;
     }
 
     public static boolean isSorted(int[] array, boolean ascending) {
@@ -152,6 +170,18 @@ public class IntArrayOperations {
         for (int j : merge(array2, arrayToCheckIfValueIsPresent)) {
             System.out.println(j);
         }
+
+        System.out.println("Sorted array ascending : ");
+        for (int j : sort(arrayToCheckIfValueIsPresent, true)) {
+            System.out.println(j);
+        }
+
+        System.out.println("Sorted array descending : ");
+        for (int j : sort(arrayToCheckIfValueIsPresent, false)) {
+            System.out.println(j);
+        }
+
+
 
 
     }
