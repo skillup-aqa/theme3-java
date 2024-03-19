@@ -33,8 +33,11 @@ public class IntArrayOperations {
 
 
     public static int sum(int[] array) {
-        // TODO: Implement solution here
-        return -1;
+        int sum = 0;
+        for (int j: array) {
+        sum +=j;
+        }
+        return sum;
     }
 
     public static int avg(int[] array) {
@@ -200,6 +203,8 @@ public class IntArrayOperations {
         }
         System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), false));
         System.out.println("Is sorted ascending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), true));
+
+        System.out.println("Sum of values is: " +sum(arrayToCheckIfValueIsPresent));
 
 
     }
