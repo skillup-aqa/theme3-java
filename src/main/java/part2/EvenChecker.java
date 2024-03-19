@@ -9,7 +9,7 @@ public class EvenChecker {
     }
 
     public static void main(String[] args) {
-        int number = 5;
+        int number = 1;
         boolean result = Even(number);
         System.out.println(result);
     }

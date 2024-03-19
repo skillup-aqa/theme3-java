@@ -20,12 +20,11 @@ public class TemperatureConvertor {
         System.out.println("choose C or F ");
 
         String unit = in.next();
-        if (unit == "F") {
+        if (unit == "C") {
             System.out.println("temp in C:" + convertFahrenheitToCelsius(temperature));
 //        } else if (unit == "C") {
 //            System.out.println("temp in F:" + convertCelsiusToFahrenheit(temperature));
-            // не зміг розібратися по якій причині при вводі F - виводить F, а не С, та ще ы неправильно конвертує.
-            // Бавився з if else if, while do break, але не вийшло.
+
         } else {
          System.out.println("temp in F:" + convertCelsiusToFahrenheit(temperature));
         }
