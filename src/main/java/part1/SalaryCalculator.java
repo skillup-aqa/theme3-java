@@ -3,7 +3,7 @@ package part1;
 public class SalaryCalculator {
     public static double calculateSalaryBeforeTaxes(double hoursPerMonth, double hourlyRate) {
         double salaryBeforeTaxes1 = (hoursPerMonth * hourlyRate);
-        return Math.floor(salaryBeforeTaxes1 * 100) / 100;
+        return Math.ceil(salaryBeforeTaxes1 * 100) / 100;
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
@@ -14,8 +14,8 @@ public class SalaryCalculator {
     }
 
     public static void main(String[] args) {
-        System.out.println(calculateSalaryBeforeTaxes(160, 10));
-        System.out.println(calculateSalaryAfterTaxes(160, 10));
+        System.out.println(calculateSalaryBeforeTaxes(290.24, 40));
+        System.out.println(calculateSalaryAfterTaxes(290.24, 40));
     }
 
 }
