@@ -34,8 +34,8 @@ public class IntArrayOperations {
 
     public static int sum(int[] array) {
         int sum = 0;
-        for (int j: array) {
-        sum +=j;
+        for (int j : array) {
+            sum += j;
         }
         return sum;
     }
@@ -150,8 +150,33 @@ public class IntArrayOperations {
         return mergedArray;
     }
 
+
     public static int binarySearch(int[] array, int value, boolean ascending) {
-        // TODO: Implement solution here
+        int low = 0;
+        int high = array.length - 1;
+        int mid;
+        if (!isSorted(array, ascending)) return -1;
+        while (low <= high) {
+            mid = (low + high) / 2;
+            if (array[mid] == value) {
+                return mid;
+            } else {
+                if (ascending) {
+                    if (array[mid] < value) {
+                        low = mid + 1;
+                    } else {
+                            high = mid - 1;
+                        }
+
+                } else {
+                    if (array[mid] < value) {
+                        high = mid - 1;
+                    } else {
+                        low = mid + 1;
+                    }
+                }
+            }
+        }
         return -1;
     }
 
@@ -204,8 +229,17 @@ public class IntArrayOperations {
         System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), false));
         System.out.println("Is sorted ascending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), true));
 
-        System.out.println("Sum of values is: " +sum(arrayToCheckIfValueIsPresent));
+        System.out.println("Sum of values is: " + sum(arrayToCheckIfValueIsPresent));
 
 
+        System.out.println("Binary search asc: " + binarySearch(sort(arrayToCheckIfValueIsPresent, true), 5, true));
+        System.out.println("Binary search desc: " + binarySearch(sort(arrayToCheckIfValueIsPresent, false), 5, false));
+        System.out.println("Binary search asc with absent value: " + binarySearch(sort(arrayToCheckIfValueIsPresent, true), 8, true));
+        System.out.println("Binary search asc with not sorted massive: " + binarySearch(arrayToCheckIfValueIsPresent, 5, true));
+
+        //from test
+        int[] arrayBin = {1, 2, 3, 4, 5};
+        System.out.println(binarySearch(arrayBin, 6, true));
     }
+
 }
