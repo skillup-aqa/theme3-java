@@ -4,7 +4,10 @@ public class EvenChecker {
     public static boolean isEven(int number) {
         // For sake of simplicity, we assume that 0 is an even number
         // TODO: Implement solution here
-        return false;
+        if (number%2 ==0)
+        return true;
+        else
+            return false;
     }
 
     public static void main(String[] args) {
