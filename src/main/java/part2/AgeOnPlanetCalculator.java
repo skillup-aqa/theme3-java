@@ -29,7 +29,6 @@ public class AgeOnPlanetCalculator {
                 orbitalPeriod = 164.79132;
                 break;
             default:
-                // If the planet is not in the list, return -1
                 return -1;
         }
             return ageInYears / orbitalPeriod;
