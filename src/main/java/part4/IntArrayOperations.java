@@ -12,6 +12,9 @@ public class IntArrayOperations {
     }
 
     public static int max(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
@@ -22,6 +25,9 @@ public class IntArrayOperations {
     }
 
     public static int min(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
         int min = array[0];
         for (int j : array) {
             if (j < min) {
@@ -41,6 +47,9 @@ public class IntArrayOperations {
     }
 
     public static int avg(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
         int numberAvg = 0;
         for (int j : array) {
             numberAvg += j;
@@ -165,8 +174,8 @@ public class IntArrayOperations {
                     if (array[mid] < value) {
                         low = mid + 1;
                     } else {
-                            high = mid - 1;
-                        }
+                        high = mid - 1;
+                    }
 
                 } else {
                     if (array[mid] < value) {
@@ -239,7 +248,7 @@ public class IntArrayOperations {
 
         //from test
         int[] arrayBin = {1, 2, 3, 4, 5};
-        System.out.println(binarySearch(arrayBin, 6, true));
+        System.out.println(binarySearch(arrayBin, 2, true));
     }
 
 }
