@@ -2,8 +2,16 @@ package part2;
 
 public class MaxOfThreeChecker {
     public static int maxOfThree(int number1, int number2, int number3) {
-        // TODO: Implement solution here
-        return -1;
+        int result;
+        if (number1 < number2 && number3 < number2) {
+            result = number2;
+        } else if (number1 < number3) {
+            result = number3;
+        } else {
+            result = number1;
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
