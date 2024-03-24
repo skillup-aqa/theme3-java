@@ -50,17 +50,13 @@ public class IntArrayOperations {
         if (array.length == 0) {
             return 0;
         }
-        int numberAvg = 0;
-        for (int j : array) {
-            numberAvg += j;
-        }
-        return numberAvg / array.length;
+        return sum(array) / array.length;
     }
 
     public static int[] reverse(int[] array) {
         int[] reversedArray = new int[array.length];
-        for (int i = 0, j = (array.length - 1); i < array.length; i++, j--) {
-            reversedArray[j] = array[i];
+        for (int i = 0; i < array.length; i++) {
+            reversedArray[array.length - 1 - i] = array[i];
         }
         return reversedArray;
     }
@@ -84,17 +80,17 @@ public class IntArrayOperations {
 
     public static int[] removeDuplicates(int[] array) {
         int[] withNoDuplicates = new int[array.length];
-        int i = 0;
-        for (int j : array) {
-            if (indexOf(withNoDuplicates, j) == -1) {
-                withNoDuplicates[i] = j;
-                i++;
+        int newArrayLength = 0;
+        for (int currentArrayValue : array) {
+            if (indexOf(withNoDuplicates, currentArrayValue) == -1) {
+                withNoDuplicates[newArrayLength] = currentArrayValue;
+                newArrayLength++;
             }
 
         }
-        int[] result = new int[i];
-        for (int q = 0; q < i; q++) {
-            result[q] = withNoDuplicates[q];
+        int[] result = new int[newArrayLength];
+        for (int i = 0; i < newArrayLength; i++) {
+            result[i] = withNoDuplicates[i];
         }
 
         return result;
@@ -147,14 +143,13 @@ public class IntArrayOperations {
     public static int[] merge(int[] array1, int[] array2) {
         int lengthOfMergedArray = array1.length + array2.length;
         int[] mergedArray = new int[lengthOfMergedArray];
-        int n = 0;
-        for (int i = 0; i < array1.length; i++) {
+        int array1Length = array1.length;
+        for (int i = 0; i < array1Length; i++) {
             mergedArray[i] = array1[i];
         }
 
-        for (int k = array1.length; k < lengthOfMergedArray; k++) {
-            mergedArray[k] = array2[n];
-            n++;
+        for (int n = 0; n < array2.length; n++) {
+            mergedArray[array1Length + n] = array2[n];
         }
         return mergedArray;
     }
@@ -200,13 +195,13 @@ public class IntArrayOperations {
 
         System.out.println("Reversed array is: ");
         int[] revArray = reverse(array2);
-        for (int j : revArray) {
-            System.out.println(j);
+        for (int currentArrayElement : revArray) {
+            System.out.println(currentArrayElement);
         }
 
         System.out.println("Copied array is: ");
-        for (int i : copy(revArray)) {
-            System.out.println(i);
+        for (int currentArrayElement : copy(revArray)) {
+            System.out.println(currentArrayElement);
         }
 
         System.out.println("Checking if value is present: ");
@@ -215,13 +210,13 @@ public class IntArrayOperations {
         System.out.println(indexOf(arrayToCheckIfValueIsPresent, 6));
 
         System.out.println("Removed duplicates: ");
-        for (int i : removeDuplicates(arrayToCheckIfValueIsPresent)) {
-            System.out.println(i);
+        for (int currentArrayElement : removeDuplicates(arrayToCheckIfValueIsPresent)) {
+            System.out.println(currentArrayElement);
         }
 
         System.out.println("Merged array : ");
-        for (int j : merge(array2, arrayToCheckIfValueIsPresent)) {
-            System.out.println(j);
+        for (int currentArrayElement : merge(array2, arrayToCheckIfValueIsPresent)) {
+            System.out.println(currentArrayElement);
         }
 
         System.out.println("Sorted array ascending : ");
@@ -232,8 +227,8 @@ public class IntArrayOperations {
         System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, true), true));
 
         System.out.println("Sorted array descending : ");
-        for (int j : sort(arrayToCheckIfValueIsPresent, false)) {
-            System.out.println(j);
+        for (int currentArrayElement : sort(arrayToCheckIfValueIsPresent, false)) {
+            System.out.println(currentArrayElement);
         }
         System.out.println("Is sorted descending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), false));
         System.out.println("Is sorted ascending: " + isSorted(sort(arrayToCheckIfValueIsPresent, false), true));
