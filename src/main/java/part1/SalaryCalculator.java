@@ -8,7 +8,7 @@ public class SalaryCalculator {
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
-        double rate =  (hoursPerMonth * hourlyRate);
+        double rate = (hoursPerMonth * hourlyRate);
 
         double rateTax = (rate * 0.05) + 1562;
 
