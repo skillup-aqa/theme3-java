@@ -8,10 +8,11 @@ public class SalaryCalculator {
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
+        double rate =  (hoursPerMonth * hourlyRate);
 
-        double rateTax = (hoursPerMonth * hourlyRate ) * 0.05 + 1562;
-        double rate = hoursPerMonth * hourlyRate;
-        return Math.round(rate - rateTax);
+        double rateTax = (rate * 0.05) + 1562;
+
+        return rate - rateTax;
 
 
     }
