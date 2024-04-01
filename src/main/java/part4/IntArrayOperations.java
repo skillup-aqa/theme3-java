@@ -36,7 +36,6 @@ public class IntArrayOperations {
         return min;
     }
 
-
     public static int sum(int[] array) {
         int sum = 0;
         for (int j : array) {
@@ -44,6 +43,7 @@ public class IntArrayOperations {
         }
         return sum;
     }
+
     public static int avg(int[] array) {
         if(array.length == 0) {
             return 0;
@@ -92,18 +92,48 @@ public class IntArrayOperations {
 
     }
 
-    public static int[] sort(int[] array) {
+    private static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public static int[] sort(int[] array, boolean ascending) {
         int[] sorted = copy(array);
         for (int i = 0; i < sorted.length; i++) {
             for (int j = i + 1; j < sorted.length; j++) {
-                if (sorted[i] > sorted[j]) {
-                    int temp = sorted[i];
-                    sorted[i] = sorted[j];
-                    sorted[j] = temp;
+                if (ascending) {
+                    if (sorted[i] > sorted[j]) {
+                        swap(sorted, i, j);
+                    }
+                } else {
+                    if (sorted[i] < sorted[j]) {
+                        swap(sorted, i, j);
+                    }
                 }
             }
         }
         return sorted;
+    }
+
+    public static boolean isSorted(int[] array, boolean ascending) {
+        if (array.length < 2) {
+            return true;
+        }
+
+        for(int i = 0; i < array.length - 1; i++) {
+            if(ascending) {
+                if(array[i] > array[i + 1]) {
+                    return false;
+                }
+            } else {
+                if(array[i] < array[i + 1]) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     public static int[] merge(int[] array1, int[] array2) {
@@ -117,17 +147,33 @@ public class IntArrayOperations {
         return merged;
     }
 
-    public static int binarySearch (int[] array, int value) {
+    public static int binarySearch (int[] array, int value, boolean ascending) {
         int left = 0;
         int right = array.length - 1;
+
+        if (!isSorted(array, ascending)) {
+            System.out.println("Array is not sorted");
+            return -1;
+        }
+
         while (left <= right) {
             int middle = (left + right) / 2;
             if (array[middle] == value) {
                 return middle;
-            } else if (array[middle] < value) {
-                left = middle + 1;
             } else {
-                right = middle - 1;
+                if (ascending) {
+                    if (array[middle] < value) {
+                        left = middle + 1;
+                    } else {
+                        right = middle - 1;
+                    }
+                } else {
+                    if (array[middle] < value) {
+                        right = middle - 1;
+                    } else {
+                        left = middle + 1;
+                    }
+                }
             }
         }
         return -1;
