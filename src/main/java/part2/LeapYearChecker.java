@@ -14,7 +14,7 @@ public class LeapYearChecker {
     }
 
     public static void main(String[] args) {
-        int year = 2020;
+        int year = 2001;
         boolean result = isLeapYear(year);
         System.out.println(result);
     }
