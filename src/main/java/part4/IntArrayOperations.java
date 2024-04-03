@@ -3,6 +3,10 @@ package part4;
 public class IntArrayOperations {
     public static int[] fillWithNumbers(int[] array) {
         // TODO: Implement solution here
+        int[] array1 = new int[1001];
+        for (int i = 0; i <= 1000; i++) {
+            array1[i] = i;
+        }
         return null;
     }
 
