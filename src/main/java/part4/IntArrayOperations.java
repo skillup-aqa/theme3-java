@@ -1,34 +1,65 @@
 package part4;
 
+import java.util.Random;
+
 public class IntArrayOperations {
+    public static void main(String[] args) {
+        int[] array = new int[1001];
+        System.out.println("sum" + sum(array));
+        System.out.println("Max number" + max(array));
+        System.out.println("Min number" + min(array));
+
+
+    }
     public static int[] fillWithNumbers(int[] array) {
         // TODO: Implement solution here
-        int[] array1 = new int[1001];
-        for (int i = 0; i <= 1000; i++) {
-            array1[i] = i;
-        }
-        return null;
-    }
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array [i] = random.nextInt(1001);
+                                }
+        return array;
 
+    }
     public static int max(int[] array) {
         // TODO: Implement solution here
-        return -1;
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                            }
+        }
+        return max;
     }
 
     public static int min(int[] array) {
         // TODO: Implement solution here
-        return -1;
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+
+            }
+        }
+        return min;
     }
 
 
     public static int sum(int[] array) {
         // TODO: Implement solution here
-        return -1;
+        int sum = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
+
     public static int avg(int[] array) {
-        // TODO: Implement solution here
-        return -1;
+        int sum = sum(array);
+        int average = sum / array.length;
+        return average;
     }
+
 
     public static int[] reverse(int[] array) {
         // TODO: Implement solution here
@@ -70,3 +101,4 @@ public class IntArrayOperations {
         return -1;
     }
 }
+
