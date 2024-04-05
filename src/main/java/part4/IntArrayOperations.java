@@ -63,17 +63,36 @@ public class IntArrayOperations {
 
     public static int[] reverse(int[] array) {
         // TODO: Implement solution here
-        return null;
+        int start = 0;
+        int end = array.length - 1;
+
+        while (start < end) {
+            int temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            start++;
+            end--;
+        }
+        return array;
     }
 
+
     public static int[] copy(int[] array) {
-        // TODO: Implement solution here
-        return null;
+        int[] copiedArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            copiedArray[i] = array[i];
+        }
+        return copiedArray;
     }
 
     public static int indexOf(int[] array, int value) {
         // TODO: Implement solution here
-        return -1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+               return i;
+            }
+        }
+               return -1;
     }
 
     public static int[] removeDuplicates(int[] array) {
