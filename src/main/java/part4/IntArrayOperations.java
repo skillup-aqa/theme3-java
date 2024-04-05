@@ -1,13 +1,11 @@
 package part4;
 
 import java.util.Random;
-
+import java.util.Arrays;
 public class IntArrayOperations {
     public static void main(String[] args) {
         int[] array = new int[1001];
-        System.out.println("sum" + sum(array));
-        System.out.println("Max number" + max(array));
-        System.out.println("Min number" + min(array));
+
 
 
     }
@@ -97,7 +95,16 @@ public class IntArrayOperations {
 
     public static int[] removeDuplicates(int[] array) {
         // TODO: Implement solution here
-        return null;
+        Arrays.sort(array);
+        int currentIndex = 0;
+        int nextDistinctIndex = 1;
+        while (nextDistinctIndex < array.length) {
+           if  (array[currentIndex] != array[nextDistinctIndex]) {
+                array[++currentIndex] = array[nextDistinctIndex];
+            }
+            nextDistinctIndex++;
+        }
+        return Arrays.copyOf(array, currentIndex + 1);
     }
 
     public static int[] sort(int[] array, boolean ascending) {
