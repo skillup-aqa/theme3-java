@@ -1,49 +1,110 @@
 package part4;
 
+import java.util.Random;
+import java.util.Arrays;
 public class IntArrayOperations {
+    public static void main(String[] args) {
+        int[] array = new int[1001];
+
+
+
+    }
     public static int[] fillWithNumbers(int[] array) {
         // TODO: Implement solution here
-        return null;
-    }
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array [i] = random.nextInt(1001);
+                                }
+        return array;
 
+    }
     public static int max(int[] array) {
         // TODO: Implement solution here
-        return -1;
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                            }
+        }
+        return max;
     }
 
     public static int min(int[] array) {
         // TODO: Implement solution here
-        return -1;
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+
+            }
+        }
+        return min;
     }
 
 
     public static int sum(int[] array) {
         // TODO: Implement solution here
-        return -1;
+        int sum = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
+
     public static int avg(int[] array) {
-        // TODO: Implement solution here
-        return -1;
+        int sum = sum(array);
+        int average = sum / array.length;
+        return average;
     }
+
 
     public static int[] reverse(int[] array) {
         // TODO: Implement solution here
-        return null;
+        int start = 0;
+        int end = array.length - 1;
+
+        while (start < end) {
+            int temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            start++;
+            end--;
+        }
+        return array;
     }
 
+
     public static int[] copy(int[] array) {
-        // TODO: Implement solution here
-        return null;
+        int[] copiedArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            copiedArray[i] = array[i];
+        }
+        return copiedArray;
     }
 
     public static int indexOf(int[] array, int value) {
         // TODO: Implement solution here
-        return -1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+               return i;
+            }
+        }
+               return -1;
     }
 
     public static int[] removeDuplicates(int[] array) {
         // TODO: Implement solution here
-        return null;
+        Arrays.sort(array);
+        int currentIndex = 0;
+        int nextDistinctIndex = 1;
+        while (nextDistinctIndex < array.length) {
+           if  (array[currentIndex] != array[nextDistinctIndex]) {
+                array[++currentIndex] = array[nextDistinctIndex];
+            }
+            nextDistinctIndex++;
+        }
+        return Arrays.copyOf(array, currentIndex + 1);
     }
 
     public static int[] sort(int[] array, boolean ascending) {
@@ -66,3 +127,4 @@ public class IntArrayOperations {
         return -1;
     }
 }
+
