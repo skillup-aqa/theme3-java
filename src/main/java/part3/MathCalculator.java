@@ -23,8 +23,7 @@ public class MathCalculator {
             return false;
         }
         for (int i = 2; i < n; i++) {
-            if (n % i == 0) ;
-            {
+            if (n % i == 0) {
                 return false;
             }
         }
@@ -36,8 +35,13 @@ public class MathCalculator {
         int numberOfDigits = 0;
         int sum = 0;
         while (n > 0) {
-            int digit = n % 10;
-            sum += Math.pow(digit, numberOfDigits);
+            numberOfDigits++;
+            n /= 10;
+        }
+        n = originalNumber;
+        while (n > 0) {
+            int number = n % 10;
+            sum += (int) Math.pow(number, numberOfDigits);
             n /= 10;
         }
         return sum == originalNumber;
