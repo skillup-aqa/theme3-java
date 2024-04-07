@@ -1,8 +1,5 @@
 package part4;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.Nullable;
-
 import java.util.Arrays;
 import java.util.Random;
 
@@ -65,11 +62,11 @@ public class IntArrayOperations {
     }
 
     public static int[] copy(int[] array) {
-        int[] copyed = new int[array.length];
+        int[] copied = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            copyed[i] = array[i];
+            copied[i] = array[i];
         }
-        return copyed;
+        return copied;
     }
 
     public static int indexOf(int[] array, int value) {
