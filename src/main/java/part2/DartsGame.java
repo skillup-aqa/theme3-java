@@ -2,8 +2,16 @@ package part2;
 
 public class DartsGame {
     public static int getScore(double x, double y) {
-        // TODO: Implement solution here
-        return -1;
+        double distanceFromCenter = Math.sqrt(x * x + y * y);
+        if (distanceFromCenter <= 1.0) {
+            return 10;
+        } else if (distanceFromCenter <= 5.0) {
+            return 5;
+        } else if (distanceFromCenter <= 10.0) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public static void main(String[] args) {
@@ -12,4 +20,5 @@ public class DartsGame {
         int result = getScore(x, y);
         System.out.println(result);
     }
+
 }
