@@ -2,10 +2,12 @@ package part1;
 
 public class ArithmeticMeanCalculator {
     public static double calculateArithmeticMean(double a, double b, double c) {
-        // TODO: Implement solution here
-        return -1;
-    }
 
+        double m = (a + b + c) / 3;
+        System.out.println("calculateArithmeticMean" + m);
+        return m;
+
+    }
     public static void main(String[] args) {
         double a = 1;
         double b = 2;
