@@ -19,6 +19,9 @@ public class IntArrayOperations {
     }
 
     public static int max(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > max) {
@@ -29,10 +32,13 @@ public class IntArrayOperations {
     }
 
     public static int min(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
         int min = array[0];
-        for (int k : array) {
-            if (k < min) {
-                min = k;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
             }
         }
         return min;
