@@ -8,9 +8,9 @@ public class SalaryCalculator {
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
-        double grossSalary = hoursPerMonth * hourlyRate;
-        double percentageAmount = grossSalary * 0.95 - 1562;
-        double SalaryAfterTaxes = grossSalary - percentageAmount;
+        double calculateSalaryBeforeTaxes = hoursPerMonth * hourlyRate;
+        double percentageAmount = calculateSalaryBeforeTaxes * 0.95 - 1562;
+        double SalaryAfterTaxes = calculateSalaryBeforeTaxes - percentageAmount;
         return Math.ceil(SalaryAfterTaxes * 100) / 100.0;
     }
 
