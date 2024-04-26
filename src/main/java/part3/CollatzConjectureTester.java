@@ -3,8 +3,16 @@ package part3;
 public class CollatzConjectureTester {
     public static int collatzConjecture(int n) {
         // Read about Collatz Conjecture here: https://en.wikipedia.org/wiki/Collatz_conjecture
-        // TODO: Implement solution here
-        return -1;
+        int cycle = 0;
+        while (n > 0 && n != 1 ) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+            cycle++; System.out.println(cycle + "cycles");
+        }
+        return cycle;
     }
 
     public static void main(String[] args) {

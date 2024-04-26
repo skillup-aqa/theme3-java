@@ -3,33 +3,52 @@ package part3;
 public class MathCalculator {
     public static int sumPositiveNumbersToN(int n) {
         // Consider 0 as a positive number
-        // TODO: Implement solution here
-        return -1;
+        int sum = 0;
+        for (int i = 1; i <= n; i++ ) {
+            sum += i;
+        } return sum;
     }
 
     public static int factorial(int n) {
-        // TODO: Implement solution here
-        return -1;
+        int factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
     }
 
     public static boolean isPrime(int n) {
         // Consider 1 and negative numbers as non-prime
-        // TODO: Implement solution here
-        return false;
+        if (n <= 1 ) return false;
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) return false;
+        } return true;
     }
 
     public static boolean isArmstrongNumber(int n) {
-        // TODO: Implement solution here
-        return false;
+        int sum = 0;
+     int original = n;
+     int digits = 0;
+     while (n > 0) { digits++; n /= 10; }
+     n = original;
+     while (n > 0) { int digit = n % 10;
+         sum += (int) Math.pow(digit, digits); n /= 10; }
+        return sum == original;
     }
 
     public static void printFibonacciNumbers(int n) {
-        // TODO: Implement solution here
+        int first = 0; int second = 1;
+        System.out.println(first); System.out.println(second);
+        for (int i = 2; i < n; i++) {
+            int next = first + second;
+            System.out.println(next);
+            first = second; second = next; }
     }
 
     public static void printDigitsReversed(int n) {
         // Use System.out.print() to print the digits without new line
-        // TODO: Implement solution here
+        while (n > 0) { int digit = n % 10; System.out.println(digit);
+            n /= 10; }
 
     }
 
