@@ -2,8 +2,8 @@ package part1;
 
 public class ArithmeticMeanCalculator {
     public static double calculateArithmeticMean(double a, double b, double c) {
-        // TODO: Implement solution here
-        return -1;
+       double avarageOfNumbers = (a + b + c) / 3;
+        return avarageOfNumbers;
     }
 
     public static void main(String[] args) {
