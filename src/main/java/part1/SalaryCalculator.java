@@ -1,14 +1,20 @@
 package part1;
 
+import static java.lang.Math.round;
+
 public class SalaryCalculator {
     public static double calculateSalaryBeforeTaxes(double hoursPerMonth, double hourlyRate) {
         // TODO: Implement solution here
-        return -1;
+        double resultBT = hoursPerMonth * hourlyRate;
+        return resultBT;
     }
 
     public static double calculateSalaryAfterTaxes(double hoursPerMonth, double hourlyRate) {
-        // TODO: Implement solution here
-        return -1;
+        double resultBT = hoursPerMonth * hourlyRate;
+        final double eSV = 1562.0;
+        final double percent = 0.05;
+        double resultAT = round((resultBT - resultBT * percent - eSV) * 100) / 100.0;
+        return resultAT;
     }
 
     public static void main(String[] args) {
