@@ -2,8 +2,10 @@ package part1;
 
 public class DivisionWithRemainderCalculator {
     public static int calculateRemainder(int dividend, int divisor) {
-        // TODO: Implement solution here
-        return -1;
+
+        int C = dividend % divisor;
+        System.out.println("calculateRemainder"+C);
+        return C;
     }
 
     public static void main(String[] args) {

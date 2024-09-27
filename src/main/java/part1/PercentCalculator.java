@@ -2,8 +2,11 @@ package part1;
 
 public class PercentCalculator {
     public static double calculatePercent(double number, double percent) {
-        // TODO: Implement solution here
-        return -1;
+
+        double K = (number * percent)/100 ;
+
+        System.out.println("calculatePercent"+K);
+        return K;
     }
 
     public static void main(String[] args) {
